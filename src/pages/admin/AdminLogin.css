@@ -1,0 +1,83 @@
+.admin-login-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+
+  /* Background image will be injected inline from JSX */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* LOGIN CARD */
+.admin-login-card {
+  background: #ffffff;
+  padding: 42px 36px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  text-align: center;
+
+  /* Depth & separation */
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* TITLE */
+.admin-login-card h2 {
+  margin-bottom: 6px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1e272e;
+}
+
+/* SUBTITLE */
+.admin-login-card .subtitle {
+  font-size: 14px;
+  color: #57606f;
+  margin-bottom: 28px;
+}
+
+/* FORM */
+.admin-login-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUTS */
+.admin-login-card input {
+  width: 100%;
+  padding: 13px 14px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  border: 1px solid #dcdde1;
+  font-size: 14px;
+  background: #ffffff;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admin-login-card input:focus {
+  outline: none;
+  border-color: #00c6ff;
+  box-shadow: 0 0 0 2px rgba(0, 198, 255, 0.15);
+}
+
+/* BUTTON */
+.admin-login-card button {
+  width: 100%;
+  padding: 13px;
+  background: #00c6ff;
+  color: #000;
+  border: none;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.admin-login-card button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(0, 198, 255, 0.4);
+}
