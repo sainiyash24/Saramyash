@@ -8,9 +8,11 @@ const api = axios.create({
 api.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem("token");
+
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }
+
     return config;
   },
   (error) => Promise.reject(error)
@@ -23,14 +25,12 @@ api.interceptors.response.use(
     const status = error.response?.status;
     const currentPath = window.location.pathname;
 
-    // 🔥 Only logout if user is on admin pages
     if (
       (status === 401 || status === 403) &&
       currentPath.startsWith("/admin")
     ) {
       localStorage.removeItem("token");
 
-      // Avoid infinite redirect
       if (!currentPath.includes("/admin/login")) {
         alert("Session expired. Please login again.");
         window.location.href = "/admin/login";
